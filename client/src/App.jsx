@@ -4,8 +4,9 @@ import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import Admin from "./pages/admin/Admin";
 import Dashboard from "./pages/admin/Dashboard";
-import Products from "./pages/admin/Products";
-import ProductCRUD from "./pages/admin/ProductCRUD";
+import ProductsList from "./pages/admin/ProductsList";
+import Product from "./pages/admin/Product";
+import NewProduct from "./pages/admin/NewProduct";
 
 const App = () => {
   return (
@@ -16,8 +17,9 @@ const App = () => {
         </Route>
         <Route path="admin" element={<Admin />}>
           <Route index element={<Dashboard />} />
-          <Route path="products" element={<Products />} />
-          <Route path="products/:id" element={<ProductCRUD />} />
+          <Route path="products" element={<ProductsList />} />
+          <Route path="products/:id" element={<Product />} />
+          <Route path="products/new-product" element={<NewProduct />} />
         </Route>
       </Routes>
     </Router>
