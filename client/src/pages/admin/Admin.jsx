@@ -6,7 +6,7 @@ const Admin = () => {
   return (
     <main className="flex justify-start items-start">
       <Sidebar />
-      <div className="w-full">
+      <div className="w-full h-[100vh] overflow-y-auto">
         <Outlet />
       </div>
     </main>
